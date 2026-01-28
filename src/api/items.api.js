@@ -1,4 +1,5 @@
-const BASE_URL = "http://localhost:4000";
+const BASE_URL = "https://auction-backend-1awd.onrender.com";
+
 
 export async function fetchItems() {
   const res = await fetch(`${BASE_URL}/items`);
