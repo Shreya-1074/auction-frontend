@@ -1,50 +1,68 @@
-# 🖥️ Real-Time Auction Frontend
+# Real-Time Auction Platform – Frontend
 
-React + Vite frontend for a real-time auction / bidding platform.
+This is the frontend application for a real-time auction and bidding platform built using React and Vite.  
+It connects to a Node.js + Socket.io backend to provide real-time bidding, live countdown timers, and instant UI updates.
 
 ---
 
-## 🌐 Live Demo
+## Live Demo
 
 Frontend:
-(https://auction-frontend-sigma-virid.vercel.app/)
+https://auction-frontend-sigma-virid.vercel.app/
 
 Backend:
 https://auction-backend-1awd.onrender.com
 
 ---
 
-## 🚀 Features
+## Features
 
-- Live auction updates using Socket.io
-- Server-synced countdown timers
-- Winning / Outbid UI states
+- Real-time auction updates using Socket.io
+- Server-synchronized countdown timers
+- Visual feedback for winning and outbid states
 - Price flash animation on bid updates
-- Multi-user real-time bidding
+- Multi-user real-time bidding experience
 
 ---
 
-## 🧑‍💻 Run Locally
+## Technology Stack
+
+- React
+- Vite
+- Socket.io Client
+
+---
+
+## Running Locally
 
 ```bash
 npm install
 npm run dev
-Open:
+Open in browser:
 http://localhost:5173
 
-Architecture
+Backend Configuration
+
+The frontend is currently configured to use the deployed backend:
+
+https://auction-backend-1awd.onrender.com
+
+
+You can change this in the following files if needed:
+
+src/api/items.api.js
+
+src/socket/socket.js
+
+Running Using Docker
+docker build -t auction-frontend .
+docker run -p 5173:5173 auction-frontend
+Then open:
+http://localhost:5173
+
+Project Structure
 src/
-  api/         # API calls
-  socket/      # Socket.io client
+  api/         # API integration
+  socket/      # Socket.io client setup
   components/  # UI components
-  pages/       # Pages
-
-
----
-
-# 💾 Commit & Push frontend README
-
-```bash
-git add README.md
-git commit -m "Add frontend README"
-git push
+  pages/       # Application pages
